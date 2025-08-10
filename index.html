@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pixel Survival (2D)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+  <header><h1>Pixel Survival</h1></header>
+  <main>
+    <canvas id="game" width="640" height="480"></canvas>
+    <div id="hud">
+      <div>Wood: <span id="wood">0</span></div>
+      <div>Meat: <span id="meat">0</span></div>
+      <div>Rice: <span id="rice">0</span></div>
+    </div>
+    <div id="controls">
+      <button id="btn-chop">Chop</button>
+      <button id="btn-plant">Plant</button>
+      <button id="btn-hunt">Hunt</button>
+    </div>
+    <p id="msg">Tap canvas to move.</p>
+  </main>
+  <footer>Upload this folder to GitHub & enable Pages (branch: main, folder: /)</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
