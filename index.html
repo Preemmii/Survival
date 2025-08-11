@@ -1,30 +1,51 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="th">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pixel Survival (2D)</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมล่าสัตว์</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #eef;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        #game-area {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 500px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        .log {
+            height: 200px;
+            overflow-y: auto;
+            background: #f8f8f8;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-<div id="wrapper">
-  <header><h1>Pixel Survival</h1></header>
-  <main>
-    <canvas id="game" width="640" height="480"></canvas>
-    <div id="hud">
-      <div>Wood: <span id="wood">0</span></div>
-      <div>Meat: <span id="meat">0</span></div>
-      <div>Rice: <span id="rice">0</span></div>
+    <div id="game-area">
+        <h1>เกมล่าสัตว์</h1>
+        <p>พลังชีวิต: <span id="player-hp">100</span></p>
+        <p>สัตว์ที่พบ: <span id="current-animal">-</span></p>
+        <button onclick="findAnimal()">ออกล่าสัตว์</button>
+        <button onclick="attackAnimal()">โจมตี</button>
+        <div class="log" id="log"></div>
     </div>
-    <div id="controls">
-      <button id="btn-chop">Chop</button>
-      <button id="btn-plant">Plant</button>
-      <button id="btn-hunt">Hunt</button>
-    </div>
-    <p id="msg">Tap canvas to move.</p>
-  </main>
-  <footer>Upload this folder to GitHub & enable Pages (branch: main, folder: /)</footer>
-</div>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
